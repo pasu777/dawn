@@ -1,0 +1,34 @@
+{
+  "name": "dawn",
+  "version": "0.0.0",
+  "description": "An smart webpage builder",
+  "main": "index.js",
+  "bin": "./bin/dawn",
+  "scripts": {
+    "test": "dawn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lichenhao/dawn.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "webbuilder",
+    "jQuery",
+    "EJS"
+  ],
+  "dependencies": {
+    "commander": "latest",
+    "express": "latest",
+    "ejs": "latest",
+    "mongoose": "latest",
+    "connect-mongo": "latest"
+  },
+  "author": "lichenhao",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/lichenhao/dawn/issues"
+  },
+  "homepage": "https://lichenhao.github.io/dawn"
+}
