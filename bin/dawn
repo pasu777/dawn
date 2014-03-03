@@ -15,7 +15,7 @@ project.command('init').
 		},
 		process.cwd()
 	).action(function (env) {
-		require(__dirname + '/../libs/project-init.js').init(env);
+		require(__dirname + '/../libs/dawn-init.js').init(env);
 	});
 project.command('ui').
 	description('Run UI server').
@@ -30,7 +30,7 @@ project.command('ui').
 		},
 		8000
 	).action(function (env) {
-		require(__dirname + '/../libs/project-ui.js').init(env);
+		require(__dirname + '/../libs/dawn-ui.js').init(env);
 	});
 project.command('test [env]').
 	description('Run test script').
@@ -39,6 +39,6 @@ project.command('test [env]').
 		'Test project with [type]',
 		'all'
 	).action(function (env) {
-		require(__dirname + '/../libs/project-test.js').init(env);
+		require(__dirname + '/../libs/dawn-test.js').init(env);
 	});
 project.parse(process.argv);
