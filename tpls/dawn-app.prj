@@ -1,0 +1,30 @@
+{
+	"name": "dawn-app",
+	"version" : "0.0.0",
+	"webroot": ".",
+	"view": "/view/",
+	"static": "/static/",
+	"db": "root@127.0.0.1:21182 123456",
+	"static": {
+		"locate": "127.0.0.1",
+		"port": "8090"
+	},
+	"view": {
+		"locate": "127.0.0.1",
+		"port": "8080"
+	},
+	"dev-db": {
+		"locate": "127.0.0.1",
+		"port": "21182",
+		"uname": "root",
+		"password": "123456"
+	},
+	"dev-static": {
+		"locate": "127.0.0.1",
+		"port": "8090"
+	},
+	"dev-view": {
+		"locate": "127.0.0.1",
+		"port": "8080"
+	}
+}
