@@ -1,44 +1,58 @@
 #!/usr/bin/env node
-var path = require('path'),
-project = require('commander').
-  version('0.0.0');
-
-project.command('init').
-  description('Initial the project').
-  option(
+var path = require('path');
+var project = require('commander').version('0.0.1');
+var workSpace = process.cwd();
+project.option(
     '-d, --dir [dir]',
     'Initial project at [dir]',
-    function resolveDir(dir) {
+    function resolveDir (dir) {
+      'use strict';
       if (dir.indexOf('.') === 0) {
         return path.resolve(process.cwd() + '/' + dir);
       }
     },
-    process.cwd()
-  ).action(function onInit(env) {
-    require(__dirname + '/../libs/dawn_init.js').init(env);
+    workSpace
+  ).option(
+    '-m, --mode [mode]',
+    function resolveInitMode (mode) {
+      'use strict';
+      var modeMap = {
+        deploy: 1,
+        dev: 1
+      };
+      if (modeMap[mode] !== 1) {
+        return 'dev';
+      }
+    }, 'dev'
+  ).option(
+    '-S, --no-static',
+    'Without static files'
+  ).option(
+    '-t, --tmpl',
+    'With template file'
+  );
+
+project.command('init <switch> <name>').
+  description('Initial the project').
+  action(function onInitProject (which, name, env) {
+    'use strict';
+    var filePath = path.resolve(__dirname + '/../libs/dawn_init_' + which + '.js');
+    require(filePath).init(env, name);
   });
+
 project.command('ui').
   description('Run UI server').
-  option(
-    '-p, --port [port]',
-    'Run dawn at http(s)://location:[port]',
-    function resolvePort(port) {
-      port = +port | 0;
-      if (port > 0 ) {
-        return port;
-      }
-    },
-    8000
-  ).action(function onUI(env) {
-    require(__dirname + '/../libs/dawn_ui.js').init(env);
+  action(function onUI (env) {
+    'use strict';
+    var filePath = __dirname + '/../libs/dawn_ui.js';
+    require(filePath).init(env);
   });
-project.command('test [env]').
+project.command('test').
   description('Run test script').
-  option(
-    '-t, --type [type]',
-    'Test project with [type]',
-    'all'
-  ).action(function onTest(env) {
-    require(__dirname + '/../libs/dawn_test.js').init(env);
+  action(function onTest (env) {
+    'use strict';
+    var filePath = __dirname + '/../libs/dawn_test.js';
+    require(filePath).init(env);
   });
+
 project.parse(process.argv);

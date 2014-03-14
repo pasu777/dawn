@@ -1,0 +1,17 @@
+{
+  "name": "dawn-app",
+  "version" : "0.0.0",
+  "webroot": ".",
+  "db": "root@127.0.0.1:21182 123456",
+  "common": "common",
+  "statics": {
+    "root": "./static/",
+    "locate": "127.0.0.1",
+    "port": "8090"
+  },
+  "app": {
+    "root": "./app/",
+    "locate": "127.0.0.1",
+    "port": "8080"
+  }
+}

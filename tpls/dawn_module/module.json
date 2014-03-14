@@ -1,0 +1,9 @@
+{
+  "name": "index",
+  "version": "0.0.1",
+  "homepage": "index",
+  "errpages": {
+    "200": "error",
+    "404": "404"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "a",
+  "version": "0.0.0",
+  "webroot": "/Users/Catty/work/dawn/webroot",
+  "db": "root@127.0.0.1:21182",
+  "static": {
+    "root": "./src/",
+    "locate": "127.0.0.1",
+    "port": "8090"
+  },
+  "app": {
+    "root": "./src/",
+    "locate": "127.0.0.1",
+    "port": "8080"
+  }
+}

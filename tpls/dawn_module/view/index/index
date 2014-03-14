@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+module.exports = function ($layout, $widget, $component, $scope) {
+  var html = $layout.use('index', {
+    title: "demo page"
+  }, 'common');
+  html.startBlock('content');
+    $widget.use('index');
+    $component.use('index');
+    html.push('<div></div>');
+  html.endBlock('content');
+  html.render();
+};
+// build system extends elements : 
+//  layout 
+//  widget 
+//  component 
+//  block
+// use build system , translate to upon this
+// <layout name="index" block-title="demo page">
+//   
+// </layout>

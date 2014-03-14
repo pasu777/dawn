@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+exports = module.exports = function (app) {
+  // app.scope('index', app.req);
+  // app.render 
+  // (
+  //  status, /* response header status code */ 
+  //  tpl, /* using template for render */
+  //  scope, /* using scope for template also can be simple module name(for some no argument request)*/
+  //  model /* which model should be used, if not set, use current model as default */
+  // );
+  app.render('index', 'index');
+};

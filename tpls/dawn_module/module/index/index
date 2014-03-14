@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+module.exports = {
+  name: 'demo',
+  title: 'This is a demo page',
+  body: 'Welcome dawn project!'
+};
