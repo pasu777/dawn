@@ -13,14 +13,14 @@
   },
   "keywords": [
     "nodejs",
-    "express",
+    "connect",
     "webbuilder",
     "jQuery",
     "EJS"
   ],
   "dependencies": {
     "commander": "latest",
-    "express": "latest",
+    "dawn-project": "latest",
     "ejs": "latest",
     "mongoose": "latest",
     "connect-mongo": "latest",

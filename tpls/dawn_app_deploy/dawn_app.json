@@ -5,12 +5,12 @@
   "db": "root@127.0.0.1:21182 123456",
   "common": "common",
   "statics": {
-    "root": "./static/",
+    "root": "./statics/",
     "locate": "127.0.0.1",
     "port": "8090"
   },
-  "app": {
-    "root": "./app/",
+  "views": {
+    "root": "./views/",
     "locate": "127.0.0.1",
     "port": "8080"
   }
