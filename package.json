@@ -19,13 +19,9 @@
     "EJS"
   ],
   "dependencies": {
+    "mime": "latest",
     "commander": "latest",
-    "dawn-project": "latest",
-    "ejs": "latest",
-    "mongoose": "latest",
-    "connect-mongo": "latest",
-    "mkdirp": "latest",
-    "ncp": "latest"
+    "underscore": "latest"
   },
   "author": "lichenhao",
   "license": "BSD-2-Clause",

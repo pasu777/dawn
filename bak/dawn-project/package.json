@@ -1,0 +1,36 @@
+{
+  "name": "dawn-project",
+  "version": "0.0.0",
+  "description": "As connect but more MVC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lichenhao/dawn-project.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "express",
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful",
+    "router",
+    "app",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lichenhao/dawn-project"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "license": "BSD",
+  "readmeFilename": "Readme.md",
+  "bugs": {
+    "url": "https://github.com/lichenhao/dawn-project/issues"
+  },
+  "homepage": "https://github.com/lichenhao/dawn-project",
+}

@@ -1,21 +1,10 @@
 #!/usr/bin/env node
-module.exports = function ($layout, $widget, $component, $scope) {
-  var html = $layout.use('index', {
-    title: "demo page"
-  }, 'common');
-  html.startBlock('content');
-    $widget.use('index');
-    $component.use('index');
-    html.push('<div></div>');
-  html.endBlock('content');
-  html.render();
-};
-// build system extends elements : 
-//  layout 
-//  widget 
-//  component 
-//  block
-// use build system , translate to upon this
-// <layout name="index" block-title="demo page">
-//   
-// </layout>
+<!--startLayout "skeleton@common"-->
+<!--setBlock "title" as "welcome"-->
+<!--setBlock "charset" as "UTF-8"-->
+<!--startBlock "content"-->
+  <!--useWidget "a" with {a: a, b: b}-->
+
+<!--endBlock "content" -->
+<div></div>
+<!--endLayout "skeleton@common"-->
